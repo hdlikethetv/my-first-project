@@ -118,3 +118,25 @@ body {
 .footer hr {
     border-color: rgba(255, 255, 255, 0.1);
 }
+
+/* Footer logo */
+.footer-logo {
+    height: 64px;
+    width: auto;
+    max-height: 64px;
+    display: block;
+}
+
+/* Reduce logo size on smaller screens */
+@media (max-width: 768px) {
+    .footer-logo {
+        height: 48px;
+        max-height: 48px;
+    }
+}
+@media (max-width: 480px) {
+    .footer-logo {
+        height: 40px;
+        max-height: 40px;
+    }
+}
