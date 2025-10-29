@@ -1,3 +1,13 @@
+/* Site background */
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #006e94;
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
 /* Hero image and overlay */
 .hero {
     position: relative;
@@ -15,7 +25,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.45); /* dark overlay for text contrast */
+    background: rgba(0,0,0,0.45); /* overlay for contrast */
     z-index: 1;
 }
 .hero .container {
@@ -23,22 +33,50 @@
     z-index: 2;
 }
 
-/* Responsive tweaks */
+/* Responsive hero */
 @media (max-width: 576px) {
     .hero { height: 45vh; }
     .hero h1 { font-size: 1.6rem; }
 }
 
-/* Logo */
+/* Logo sizing (controlled in CSS; no inline height) */
 .navbar-logo {
-    height: 60px;
+    height: 100px;
     width: auto;
-    max-height: 60px;
+    max-height: 100px;
 }
 
+/* Responsive logo sizes */
+@media (max-width: 992px) {
+    .navbar-logo { height: 80px; max-height: 80px; }
+}
 @media (max-width: 768px) {
-    .navbar-logo {
-        height: 45px;
-        max-height: 45px;
-    }
+    .navbar-logo { height: 60px; max-height: 60px; }
+}
+@media (max-width: 480px) {
+    .navbar-logo { height: 48px; max-height: 48px; }
+}
+
+/* Navbar text: white and bold */
+.custom-bg {
+    background-color: transparent;
+}
+.custom-bg .navbar-brand,
+.custom-bg .nav-link,
+.custom-bg .navbar-text {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+/* Hover/active states */
+.custom-bg .nav-link:hover,
+.custom-bg .nav-link:focus,
+.custom-bg .nav-link.active {
+    color: #ffffff !important;
+    opacity: 0.95;
+}
+
+/* Make toggler icon visible on dark background */
+.custom-bg .navbar-toggler-icon {
+    filter: invert(1) brightness(1.3);
 }
