@@ -81,6 +81,33 @@ body {
     filter: invert(1) brightness(1.3);
 }
 
+.navbar form .form-control {
+  border-radius: 0.25rem 0 0 0.25rem; /* only round left side */
+}
+
+/* Make search input and button appear connected */
+.navbar form .form-control {
+  border-radius: 0.25rem 0 0 0.25rem; /* round left side */
+}
+
+.navbar form .btn-search {
+  border-radius: 0 0.25rem 0.25rem 0; /* only round right side */
+}
+
+/* Custom search button */
+.btn-search {
+  background-color: #006e94; /* main theme color */
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem; /* matches input field slightly rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-search:hover {
+  background-color: #fff; 
+  transform: scale(1.05);
+}
+
 /* Footer Styles */
 .footer {
     background-color: rgba(0, 0, 0, 0.2);
@@ -140,3 +167,4 @@ body {
         max-height: 40px;
     }
 }
+
