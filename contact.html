@@ -10,6 +10,9 @@
     <title>Contact - Male Minds</title>
 </head>
 <body>
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-bg">
         <div class="container-fluid">
@@ -36,25 +39,27 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- Contact Form -->
     <section class="container my-5">
-        <h1 class="text-auto fw-bold">Contact Us</h1>
-        <form>
+        <h1 class="text-white fw-bold mb-4">Contact Us</h1>
+        <form aria-label="Contact form">
             <div class="mb-3">
-                <label for="name" class="form-label text-white">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                <label for="name" class="form-label text-white">Name <span aria-label="required">*</span></label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label text-white">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <label for="email" class="form-label text-white">Email <span aria-label="required">*</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
             </div>
             <div class="mb-3">
-                <label for="message" class="form-label text-white">Message</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Type your message here..."></textarea>
+                <label for="message" class="form-label text-white">Message <span aria-label="required">*</span></label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Type your message here..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-4">
