@@ -296,3 +296,23 @@ body {
     }
 }
 
+/* About page mobile responsiveness */
+@media (max-width: 768px) {
+    .about-content {
+        text-align: center;
+    }
+    
+    .about-content h3,
+    .about-content h5 {
+        text-align: center;
+    }
+    
+    .about-content p {
+        text-align: center;
+    }
+    
+    .about-content .lead {
+        text-align: center;
+    }
+}
+
